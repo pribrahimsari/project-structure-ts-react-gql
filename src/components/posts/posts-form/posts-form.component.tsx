@@ -1,4 +1,5 @@
 import {useForm} from "react-hook-form";
+import {useCreatePost} from "common/hooks/posts/useCreatePost";
 
 interface IFormData {
   title: string;
@@ -7,9 +8,16 @@ interface IFormData {
 
 const PostsForm = () => {
   const {register, handleSubmit} = useForm<IFormData>();
+  const createPost = useCreatePost();
 
   const myOnSubmit = handleSubmit(( {title, body} )=>{
-    console.log(title, body);
+    createPost( {
+      variables: {
+        input: {
+          title, body
+        }
+      }
+    } )
   });
 
   return(
