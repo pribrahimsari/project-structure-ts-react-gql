@@ -1,4 +1,4 @@
-import {IPost} from "../../../common/interfaces/post.interface";
+import {IPost} from "common/interfaces/post.interface";
 
 
 const PostsGridItem = ({post}:{post:IPost}) => {

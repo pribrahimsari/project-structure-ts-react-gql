@@ -1,4 +1,4 @@
-import {IPost} from "../../common/interfaces/post.interface";
+import {IPost} from "common/interfaces/post.interface";
 import PostsGridItem from "./posts-grid-item/posts-grid-item.component";
 
 interface IPostsGripProps {
